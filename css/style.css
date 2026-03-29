@@ -1,0 +1,290 @@
+/* GLOBAL */
+
+body{
+font-family: system-ui, sans-serif;
+background:#f8f9fb;
+}
+
+.brand-icon{
+background:#2563eb;
+color:white;
+padding:8px;
+border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+background:#f8f9fc;
+border-bottom:1px solid #eee;
+}
+
+.hero .badge{
+padding:8px 14px;
+font-size:14px;
+cursor:pointer;
+}
+
+.hero .badge:hover{
+background:#0d6efd;
+color:white;
+}
+
+/* SEARCH BAR */
+
+.search-bar{
+background:white;
+padding:12px;
+border-radius:12px;
+}
+.search-bar input {
+  height: 50px;
+  border-radius: 10px;
+}
+
+.search-bar button {
+  height: 50px;
+  border-radius: 10px;
+}
+/* TAGS */
+
+.tags .badge{
+margin:5px;
+padding:8px 12px;
+font-weight:500;
+}
+.tag {
+cursor: pointer;
+transition: 0.2s;
+}
+
+.tag:hover {
+transform: scale(1.05);
+}
+/* COMPANY ROW */
+
+.company-row div{
+font-weight:600;
+opacity:0.7;
+}
+
+/* INTERNSHIP CARDS */
+
+.internship-card{
+border:none;
+border-radius:14px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* CTA */
+
+.cta-box{
+background:linear-gradient(135deg,#2563eb,#1e40af);
+border-radius:20px;
+}
+
+/* FOOTER */
+
+.footer{
+background:white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.hero-title{
+font-size:36px;
+}
+
+}
+
+/* WHY CHOOSE US */
+
+.why-choose-us {
+padding: 60px 0;
+background: white;
+text-align: center;
+}
+
+.why-choose-us h2 {
+font-size: 36px;
+font-weight: 700;
+margin-bottom: 40px;
+color: #333;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.feature-card {
+background: #f8f9fb;
+padding: 30px 20px;
+border-radius: 12px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+transition: transform 0.3s ease;
+text-align: center;
+}
+
+.feature-card:hover {
+transform: translateY(-5px);
+}
+
+.feature-card i {
+font-size: 48px;
+color: #2563eb;
+margin-bottom: 20px;
+display: block;
+}
+
+.feature-card h3 {
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 15px;
+color: #333;
+}
+
+.feature-card p {
+color: #666;
+line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+.features-grid {
+grid-template-columns: 1fr;
+gap: 20px;
+}
+}
+
+/* COURSES SECTION */
+
+.main-content {
+padding: 60px 0;
+background: #f8f9fb;
+}
+
+.section-title {
+font-size: 36px;
+font-weight: 700;
+text-align: center;
+margin-bottom: 10px;
+color: #333;
+}
+
+.section-subtitle {
+text-align: center;
+color: #666;
+margin-bottom: 40px;
+font-size: 18px;
+}
+
+.courses-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.course-card {
+background: white;
+border-radius: 12px;
+padding: 30px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-align: center;
+}
+
+.course-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 15px;
+}
+
+.card-header h3 {
+font-size: 22px;
+font-weight: 600;
+margin: 0;
+color: #333;
+}
+
+.rating {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.stars {
+font-size: 16px;
+}
+
+.score {
+font-weight: 600;
+color: #2563eb;
+}
+
+.institute-count {
+color: #666;
+font-size: 14px;
+margin-bottom: 10px;
+}
+
+.course-description {
+color: #666;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+
+.find-btn {
+display: inline-block;
+background: #2563eb;
+color: white;
+padding: 12px 24px;
+border-radius: 8px;
+text-decoration: none;
+font-weight: 500;
+transition: background 0.3s ease;
+}
+
+.find-btn:hover {
+background: #1e40af;
+color: white;
+text-decoration: none;
+}
+
+@media (max-width: 768px) {
+.courses-grid {
+grid-template-columns: 1fr;
+gap: 20px;
+}
+
+.section-title {
+font-size: 28px;
+}
+
+.section-subtitle {
+font-size: 16px;
+}
+}
+.internship-list-card{
+border-radius:12px;
+border:1px solid #eee;
+transition:0.2s;
+}
+
+.internship-list-card:hover{
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}

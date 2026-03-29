@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "CodeCraft Academy",
+    "location": "Delhi",
+    "mode": "online",
+    "duration": "12 weeks",
+    "courses": ["Full Stack Development", "React", "Node.js"],
+    "description": "A hands-on program for modern web development.",
+    "website": "https://codecraft.example.com"
+  },
+  {
+    "id": 2,
+    "name": "DataNest Training",
+    "location": "Mumbai",
+    "mode": "offline",
+    "duration": "10 weeks",
+    "courses": ["Data Science", "Machine Learning", "AI"],
+    "description": "Industry-grade data science bootcamp.",
+    "website": "https://datanest.example.com"
+  }
+]

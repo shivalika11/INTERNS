@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer Intern",
+    "company": "TechStart",
+    "location": "Remote",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "category": "software",
+    "duration": "3 months"
+  },
+  {
+    "id": 2,
+    "title": "Data Science Intern",
+    "company": "DataWave",
+    "location": "Delhi",
+    "skills": ["Python", "Pandas", "Machine Learning"],
+    "category": "data",
+    "duration": "4 months"
+  },
+  {
+    "id": 3,
+    "title": "Remote Marketing Intern",
+    "company": "GrowthLab",
+    "location": "Remote",
+    "skills": ["SEO", "Content Writing", "Analysis"],
+    "category": "remote",
+    "duration": "2 months"
+  }
+]

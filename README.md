@@ -1,0 +1,2 @@
+# INTERNS
+INTERNS is a web platform designed to help students easily discover and apply for industrial training programs, internships, and skill-building opportunities. The platform organizes internship listings in a simple and modern interface where users can browse opportunities, view details, and apply directly.  The goal of INTERNS is to reduce the difficulty students face when searching for reliable training opportunities by collecting and presenting internship information in one centralized platform.
