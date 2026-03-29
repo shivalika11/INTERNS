@@ -71,11 +71,15 @@ opacity:0.7;
 /* INTERNSHIP CARDS */
 
 .internship-card{
-border:none;
-border-radius:14px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+border-radius:12px;
+transition:0.2s;
+border:1px solid #eee;
 }
 
+.internship-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
 /* CTA */
 
 .cta-box{

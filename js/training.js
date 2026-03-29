@@ -15,7 +15,8 @@ function renderInstitutes(data){
 
 const container = document.getElementById("trainingContainer");
 
-container.innerHTML = "";
+if(!container) return;
+
 
 data.forEach(inst => {
 

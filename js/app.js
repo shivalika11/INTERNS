@@ -1,4 +1,3 @@
-javascript
 // ================= LOAD DATA =================
 
 let internships = [];
@@ -8,6 +7,8 @@ async function loadInternships(){
 const response = await fetch("data/internships.json");
 internships = await response.json();
 
+console.log("Loaded:", internships);
+
 renderInternships();
 
 }
@@ -15,50 +16,61 @@ renderInternships();
 // ================= RENDER ALL =================
 
 function renderInternships() {
-  renderFilteredInternships(internships);
+  renderFilteredInternships(internships, "featuredContainer");
 }
 
 // ================= RENDER FILTERED =================
 
-function renderFilteredInternships(data) {
+function renderFilteredInternships(data, containerId) {
 
-  const container = document.getElementById("internshipContainer");
+  const container = document.getElementById(containerId);
   if (!container) return;
 
   container.innerHTML = "";
-
+if(data.length === 0){
+container.innerHTML = "<p>No internships found.</p>";
+return;
+}
   data.forEach(job => {
 
 const card = `
-<div class="card internship-list-card mb-3 p-3">
 
-      <div class="d-flex justify-content-between align-items-center">
+<div class="col-lg-4 col-md-6 mb-4">
 
-        <div>
-          <h6 class="fw-bold mb-1">${job.title}</h6>
+<div class="card internship-card shadow-sm p-3 h-100">
 
-          <p class="text-muted mb-2">
-            ${job.company} • ${job.location}
-          </p>
+<div class="d-flex align-items-center mb-2">
 
-<div class="tags">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
+width="40" class="me-2">
+
+<strong>${job.company}</strong>
+
+</div>
+
+<h5 class="fw-bold">${job.title}</h5>
+
+<p class="text-muted mb-2">
+${job.location} • ${job.duration}
+</p>
+
+<div class="mb-3">
+
 ${job.skills.map(skill =>
 `<span class="badge bg-light text-dark me-1">${skill}</span>`
 ).join("")}
-</div>
 
 </div>
 
-<div>
-
-<a href="pages/internship.html?id=${job.id}" 
-class="btn btn-primary btn-sm">
+<a href="internship.html?id=${job.id}" 
+class="btn btn-primary btn-sm mt-auto">
 View Details
 </a>
 
-      </div>
+</div>
 
 </div>
+
 `;
 
     container.innerHTML += card;
@@ -74,31 +86,20 @@ function handleSearch(){
 const keyword =
 document.getElementById("searchInput").value.toLowerCase();
 
-const location =
-document.getElementById("locationInput").value.toLowerCase();
-
   const filtered = internships.filter(job => {
 
 return (
 
-(
 job.title.toLowerCase().includes(keyword) ||
 job.company.toLowerCase().includes(keyword) ||
 job.skills.join(" ").toLowerCase().includes(keyword)
-)
-
-&&
-
-(
-location === "" ||
-job.location.toLowerCase().includes(location)
-)
 
 );
 
   });
 
-  renderFilteredInternships(filtered);
+  renderFilteredInternships(filtered, "searchResults");
+  document.getElementById("searchResultsSection").style.display = "block";
 }
 
 // ================= TAG FILTER =================
@@ -119,7 +120,7 @@ job.location.toLowerCase().includes(tag)
 
 });
 
-  renderFilteredInternships(filtered);
+  renderFilteredInternships(filtered, "featuredContainer");
 }
 
 // ================= DETAILS PAGE =================
@@ -131,7 +132,7 @@ async function loadInternshipDetails() {
 
   if (!jobId) return;
 
-const response = await fetch("../data/internships.json");
+const response = await fetch("data/internships.json");
 const internships = await response.json();
 
 const job = internships.find(j => j.id == jobId);
@@ -148,7 +149,7 @@ document.getElementById("jobDuration").innerText =
 
 document.getElementById("jobSkills").innerHTML =
 job.skills.map(skill =>
-<span class="badge text-bg-light">${skill}</span>
+`<span class="badge text-bg-light">${skill}</span>`
 ).join("");
 
 }
@@ -159,6 +160,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadInternships();
   loadInternshipDetails();
+
+  // Add search event listener
+  document.getElementById("searchBtn").addEventListener("click", handleSearch);
+
+  // Optional: search on enter key
+  document.getElementById("searchInput").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  });
 
 });
 

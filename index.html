@@ -93,15 +93,7 @@ placeholder="Search internships, skills, companies">
 Search
 </button>
 </div>
-<section class="container py-5">
 
-<h3 class="mb-4">Search Results</h3>
-
-<div class="row" id="searchResults">
-
-</div>
-
-</section>
 <!-- Category Tags -->
 <div class="mt-4 d-flex flex-wrap gap-2">
 
@@ -133,38 +125,21 @@ class="img-fluid hero-image" alt="team">
 </div>
 </section>
 
-<!-- SEARCH BAR --
-<div class="search-bar shadow-sm mt-4 p-2">
+<!-- ================= SEARCH RESULTS ================= -->
+<section class="container py-5" id="searchResultsSection" style="display: none;">
 
-  <div class="row g-2 align-items-center">
+<h3 class="mb-4">Search Results</h3>
 
-    <div class="col-md-5">
-      <input id="searchInput" class="form-control" placeholder="Title, company, or skill">
-    </div>
+<div class="row" id="searchResults">
+</div>
 
-    <div class="col-md-4">
-      <input id="locationInput" class="form-control" placeholder="Location">
-    </div>
+</section>
 
-    <div class="col-md-3">
-      <button onclick="handleSearch()" class="btn btn-primary w-100">
-        Search Jobs
-      </button>
-    </div>
 
-  </div>
-
-</div-->
 
 <!-- CATEGORY TAGS -->
 <div class="mt-4 tags">
 
-<!--span class="badge rounded-pill text-bg-light">Software Internships</span>
-<span class="badge rounded-pill text-bg-light">Marketing Internships</span>
-<span class="badge rounded-pill text-bg-light">Data Science Internships</span>
-<span class="badge rounded-pill text-bg-light">Remote Internships</span>
-<span class="badge rounded-pill text-bg-light">Corporate Training Programs</span>
-<span class="badge rounded-pill text-bg-light">Skill Bootcamps</span-->
 <span class="badge rounded-pill text-bg-light tag" onclick="filterByTag('software')">
   Software Internships
 </span>
@@ -221,7 +196,7 @@ class="img-fluid hero-image" alt="team">
 
 </div>
 
-<div class="row g-4" id="internshipContainer">
+<div class="row g-4" id="featuredContainer">
 </div>
 
 
