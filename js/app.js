@@ -30,7 +30,7 @@ function renderFilteredInternships(data) {
   data.forEach(job => {
 
 const card = `
-<div ; class_="card internship-list-card mb-3 p-3">
+<div class="card internship-list-card mb-3 p-3">
 
       <div class="d-flex justify-content-between align-items-center">
 
@@ -148,7 +148,7 @@ document.getElementById("jobDuration").innerText =
 
 document.getElementById("jobSkills").innerHTML =
 job.skills.map(skill =>
-`<span ;class_="badge text-bg-light">$;{skill}span>`
+<span class="badge text-bg-light">${skill}</span>
 ).join("");
 
 }
@@ -161,4 +161,4 @@ document.addEventListener("DOMContentLoaded", function () {
   loadInternshipDetails();
 
 });
-```
+
