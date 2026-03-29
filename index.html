@@ -82,16 +82,33 @@ that help you gain real-world experience.
 </p>
 
 <!-- Search Bar -->
-<div class="input-group mt-4 shadow-sm">
+<div class="search-box shadow-sm p-3 rounded">
 
-<input type="text"
+<div class="row g-2">
+
+<div class="col-md-5">
+<input type="text" 
 class="form-control"
 id="searchInput"
-placeholder="Search internships, skills, companies">
+placeholder="Job title, skills or company">
+</div>
 
-<button class="btn btn-primary" id="searchBtn">
+<div class="col-md-4">
+<input type="text"
+class="form-control"
+id="locationInput"
+placeholder="Location">
+</div>
+
+<div class="col-md-3">
+<button class="btn btn-primary w-100"
+onclick="handleSearch()">
 Search
 </button>
+</div>
+
+</div>
+
 </div>
 
 <!-- Category Tags -->

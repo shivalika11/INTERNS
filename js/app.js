@@ -34,45 +34,39 @@ return;
   data.forEach(job => {
 
 const card = `
+<div class="col-md-6 col-lg-4">
 
-<div class="col-lg-4 col-md-6 mb-4">
+<div class="card internship-list-card p-3 mb-4">
 
-<div class="card internship-card shadow-sm p-3 h-100">
-
-<div class="d-flex align-items-center mb-2">
-
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
-width="40" class="me-2">
-
-<strong>${job.company}</strong>
-
-</div>
-
-<h5 class="fw-bold">${job.title}</h5>
+<h6 class="fw-bold">${job.title}</h6>
 
 <p class="text-muted mb-2">
-${job.location} • ${job.duration}
+${job.company} • ${job.location}
 </p>
 
-<div class="mb-3">
-
+<div class="tags mb-3">
 ${job.skills.map(skill =>
-`<span class="badge bg-light text-dark me-1">${skill}</span>`
+`<span class="badge bg-light text-dark">${skill}</span>`
 ).join("")}
-
 </div>
 
-<a href="internship.html?id=${job.id}" 
-class="btn btn-primary btn-sm mt-auto">
-View Details
+<div class="d-flex justify-content-between align-items-center">
+
+<small class="text-muted">
+${job.duration}
+</small>
+
+<a href="pages/internship.html?id=${job.id}" 
+class="btn btn-primary btn-sm">
+View
 </a>
 
 </div>
 
 </div>
 
+</div>
 `;
-
     container.innerHTML += card;
 
   });
