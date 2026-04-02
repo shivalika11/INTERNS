@@ -16,7 +16,7 @@ renderInternships();
 // ================= RENDER ALL =================
 
 function renderInternships() {
-  renderFilteredInternships(internships, "featuredContainer");
+  renderFilteredInternships(internships, "internshipContainer");
 }
 
 // ================= RENDER FILTERED =================
@@ -92,8 +92,7 @@ job.skills.join(" ").toLowerCase().includes(keyword)
 
   });
 
-  renderFilteredInternships(filtered, "searchResults");
-  document.getElementById("searchResultsSection").style.display = "block";
+  renderFilteredInternships(filtered, "internshipContainer");
 }
 
 // ================= TAG FILTER =================
@@ -114,7 +113,7 @@ job.location.toLowerCase().includes(tag)
 
 });
 
-  renderFilteredInternships(filtered, "featuredContainer");
+  renderFilteredInternships(filtered, "internshipContainer");
 }
 
 // ================= DETAILS PAGE =================
@@ -155,15 +154,21 @@ document.addEventListener("DOMContentLoaded", function () {
   loadInternships();
   loadInternshipDetails();
 
-  // Add search event listener
-  document.getElementById("searchBtn").addEventListener("click", handleSearch);
+  // Add search event listener (some pages use button, some only text input)
+  const searchBtn = document.getElementById("searchBtn");
+  if (searchBtn) {
+    searchBtn.addEventListener("click", handleSearch);
+  }
 
   // Optional: search on enter key
-  document.getElementById("searchInput").addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
-      handleSearch();
-    }
-  });
+  const searchInput = document.getElementById("searchInput");
+  if (searchInput) {
+    searchInput.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        handleSearch();
+      }
+    });
+  }
 
 });
 
