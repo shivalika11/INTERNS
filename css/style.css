@@ -46,10 +46,7 @@ border-radius:12px;
   height: 50px;
   border-radius: 10px;
 }
-.search-box{
-background:white;
-border-radius:12px;
-}
+
 /* TAGS */
 
 .tags .badge{
@@ -309,4 +306,200 @@ border-radius:20px;
 }
 .card{
 transition:all 0.25s ease;
+
+body{
+font-family:Arial, sans-serif;
+background:#f6f7fb;
+margin:0;
+}
+}
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:white;
+border-bottom:1px solid #eee;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.search-bar input{
+padding:10px;
+margin-right:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.nav-icons i{
+font-size:20px;
+margin-left:15px;
+cursor:pointer;
+}
+
+
+/* MAIN LAYOUT */
+
+.main-container{
+display:flex;
+padding:30px;
+gap:30px;
+}
+
+
+/* FILTERS */
+
+.filters{
+width:250px;
+background:white;
+padding:20px;
+border-radius:10px;
+}
+
+.filters h4{
+margin-top:20px;
+}
+
+.filters label{
+display:block;
+margin:8px 0;
+}
+
+.apply-filter{
+margin-top:20px;
+width:100%;
+padding:10px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:6px;
+}
+
+.clear{
+margin-top:10px;
+color:#2563eb;
+cursor:pointer;
+}
+
+
+/* RESULTS */
+
+.results-section{
+flex:1;
+}
+
+.sort-bar{
+display:flex;
+justify-content:space-between;
+margin-bottom:20px;
+}
+
+.tag{
+background:#e5edff;
+padding:6px 12px;
+border-radius:20px;
+margin-right:10px;
+}
+
+
+/* INTERNSHIP CARD */
+
+.internship-card{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.internship-info h3{
+margin:0;
+}
+
+.company{
+color:#666;
+margin:5px 0;
+}
+
+.meta span{
+margin-right:10px;
+background:#f1f5f9;
+padding:5px 10px;
+border-radius:5px;
+font-size:12px;
+}
+
+.view-btn{
+background:#2563eb;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+
+/* PAGINATION */
+
+.pagination{
+text-align:center;
+margin-top:30px;
+}
+
+.pagination button{
+margin:5px;
+padding:8px 12px;
+border:1px solid #ddd;
+background:white;
+cursor:pointer;
+}
+
+.pagination .active{
+background:#2563eb;
+color:white;
+}
+
+
+/* SUBSCRIBE */
+
+.subscribe{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:40px;
+background:#fff;
+margin-top:40px;
+}
+
+.subscribe input{
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.subscribe button{
+padding:12px 18px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:6px;
+}
+
+
+/* FOOTER */
+
+footer{
+display:flex;
+justify-content:space-between;
+padding:20px 40px;
+background:#f1f5f9;
+font-size:14px;
 }
