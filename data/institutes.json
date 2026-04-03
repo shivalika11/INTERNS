@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 50,
     "name": "CodeCraft Academy",
     "location": "Delhi",
     "mode": "online",
@@ -10,7 +10,7 @@
     "website": "https://codecraft.example.com"
   },
   {
-    "id": 2,
+    "id": 49,
     "name": "DataNest Training",
     "location": "Mumbai",
     "mode": "offline",
@@ -18,5 +18,486 @@
     "courses": ["Data Science", "Machine Learning", "AI"],
     "description": "Industry-grade data science bootcamp.",
     "website": "https://datanest.example.com"
+  },
+  {
+    "id": 48,
+    "name": "AnalytixLabs",
+    "location": "Gurugram",
+    "mode": "offline",
+    "duration": "6 months",
+    "courses": ["Data Science", "Business Analytics", "Machine Learning"],
+    "description": "Industry-oriented data science training with real-world projects and placement support.",
+    "website": "https://www.analytixlabs.co.in"
+  },
+  {
+    "id": 47,
+    "name": "Uncodemy",
+    "location": "Noida",
+    "mode": "offline",
+    "duration": "4-6 months",
+    "courses": ["Data Science", "Python", "Machine Learning"],
+    "description": "Hands-on training institute focused on job-ready skills with mentorship and live projects.",
+    "website": "https://uncodemy.com"
+  },
+  {
+    "id": 46,
+    "name": "CETPA Infotech",
+    "location": "Noida",
+    "mode": "offline",
+    "duration": "4-6 months",
+    "courses": ["Data Science", "Python", "Deep Learning"],
+    "description": "Practical training with live coding sessions, industry projects, and placement guidance.",
+    "website": "https://www.cetpainfotech.com"
+  },
+  {
+    "id": 45,
+    "name": "AAFT School of Data Science",
+    "location": "Noida",
+    "mode": "offline",
+    "duration": "1 year",
+    "courses": ["Data Science", "Machine Learning", "AI"],
+    "description": "Academic and industry-integrated programs combining statistics, programming, and analytics.",
+    "website": "https://aaft.com/schoolofdatascience"
+  },
+  {
+    "id": 44,
+    "name": "TechStack Academy",
+    "location": "Delhi",
+    "mode": "offline",
+    "duration": "6 months",
+    "courses": ["Data Science", "Artificial Intelligence", "Machine Learning"],
+    "description": "Professional certification programs with industry mentors and project-based training.",
+    "website": "https://www.techstack.in"
+  },
+  {
+    "id": 43,
+    "name": "ExcelR",
+    "location": "Delhi",
+    "mode": "offline",
+    "duration": "5 months",
+    "courses": ["Data Science", "Machine Learning", "Python"],
+    "description": "Globally recognized training provider offering certification courses with placement support.",
+    "website": "https://www.excelr.com"
+  },
+  {
+    "id": 42,
+    "name": "Data Science Training Institute (TGC India)",
+    "location": "Delhi",
+    "mode": "offline",
+    "duration": "3-4 months",
+    "courses": ["Data Science", "Data Analytics", "Python"],
+    "description": "Hands-on training institute offering workshops, certification, and career guidance.",
+    "website": "https://www.datasciencetraining.co.in"
+  },
+  {
+    "id": 41,
+    "name": "TrainingYa (CTC Analytics)",
+    "location": "Gurugram",
+    "mode": "offline",
+    "duration": "4-5 months",
+    "courses": ["Data Science", "SQL", "Power BI", "Machine Learning"],
+    "description": "Comprehensive analytics training with Python, Tableau, SQL, and industry placement support.",
+    "website": "https://www.sastrainingindelhi.com"
+  },
+  
+  {
+    "id": 1,
+    "name": "AnalytixLabs",
+    "location": "Delhi",
+    "mode": "offline",
+    "duration": "6 months",
+    "courses": ["Data Science", "Machine Learning", "Business Analytics"],
+    "description": "Industry-focused data science training with live projects and placement assistance.",
+    "website": "https://www.analytixlabs.co.in"
+  },
+  {
+    "id": 2,
+    "name": "Uncodemy",
+    "location": "Noida",
+    "mode": "offline",
+    "duration": "4-6 months",
+    "courses": ["Data Science", "Python", "Machine Learning"],
+    "description": "Hands-on training with mentorship and placement support.",
+    "website": "https://uncodemy.com"
+  },
+  {
+    "id": 3,
+    "name": "CETPA Infotech",
+    "location": "Noida",
+    "mode": "offline",
+    "duration": "4 months",
+    "courses": ["Data Science", "Deep Learning", "Python"],
+    "description": "Training institute offering practical sessions and real-world projects.",
+    "website": "https://www.cetpainfotech.com"
+  },
+  {
+    "id": 4,
+    "name": "TechStack Academy",
+    "location": "Delhi",
+    "mode": "offline",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Professional IT training academy with certification programs.",
+    "website": "https://www.techstack.in"
+  },
+  {
+    "id": 5,
+    "name": "ExcelR",
+    "location": "Bangalore",
+    "mode": "offline",
+    "duration": "5 months",
+    "courses": ["Data Science", "Data Analytics", "Machine Learning"],
+    "description": "Global training provider offering industry-recognized certifications.",
+    "website": "https://www.excelr.com"
+  },
+  {
+    "id": 6,
+    "name": "Great Learning",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Professional programs designed with industry experts.",
+    "website": "https://www.mygreatlearning.com"
+  },
+  {
+    "id": 7,
+    "name": "Imarticus Learning",
+    "location": "Mumbai",
+    "mode": "offline",
+    "duration": "6 months",
+    "courses": ["Data Science", "Machine Learning", "Python"],
+    "description": "Career-focused training with industry partnerships.",
+    "website": "https://imarticus.org"
+  },
+  {
+    "id": 8,
+    "name": "Praxis Business School",
+    "location": "Kolkata",
+    "mode": "offline",
+    "duration": "9 months",
+    "courses": ["Data Science", "Analytics", "AI"],
+    "description": "Business analytics and data science education provider.",
+    "website": "https://praxis.ac.in"
+  },
+  {
+    "id": 9,
+    "name": "Jigsaw Academy",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Analytics training institute with industry certifications.",
+    "website": "https://www.jigsawacademy.com"
+  },
+  {
+    "id": 10,
+    "name": "Edvancer",
+    "location": "Mumbai",
+    "mode": "online",
+    "duration": "5 months",
+    "courses": ["Data Science", "Machine Learning", "Analytics"],
+    "description": "Online analytics education provider with certification programs.",
+    "website": "https://edvancer.in"
+  },
+  {
+    "id": 11,
+    "name": "IMS Proschool",
+    "location": "Mumbai",
+    "mode": "offline",
+    "duration": "6 months",
+    "courses": ["Data Science", "Business Analytics", "Python"],
+    "description": "Professional training institute affiliated with NSE Academy.",
+    "website": "https://www.proschoolonline.com"
+  },
+  {
+    "id": 12,
+    "name": "Analytic Square",
+    "location": "Delhi",
+    "mode": "offline",
+    "duration": "4 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Training center offering project-based learning.",
+    "website": "https://analyticsquare.com"
+  },
+  {
+    "id": 13,
+    "name": "Edoxi Training Institute",
+    "location": "Hyderabad",
+    "mode": "offline",
+    "duration": "4 months",
+    "courses": ["Data Analytics", "Python", "Machine Learning"],
+    "description": "Skill-based IT training institute.",
+    "website": "https://www.edoxi.com"
+  },
+  {
+    "id": 14,
+    "name": "Innomatics Research Labs",
+    "location": "Hyderabad",
+    "mode": "offline",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Industry-oriented data science training institute.",
+    "website": "https://www.innomatics.in"
+  },
+  {
+    "id": 15,
+    "name": "Simplilearn",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "Machine Learning", "AI"],
+    "description": "Global online bootcamp provider with certifications.",
+    "website": "https://www.simplilearn.com"
+  },
+  {
+    "id": 16,
+    "name": "UpGrad",
+    "location": "Mumbai",
+    "mode": "online",
+    "duration": "7 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Online higher education platform with university collaborations.",
+    "website": "https://www.upgrad.com"
+  },
+  {
+    "id": 17,
+    "name": "Scaler Academy",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "8 months",
+    "courses": ["Data Science", "Machine Learning"],
+    "description": "Career accelerator program for software engineers.",
+    "website": "https://www.scaler.com"
+  },
+  {
+    "id": 18,
+    "name": "Coding Ninjas",
+    "location": "Delhi",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "Python", "Machine Learning"],
+    "description": "Coding bootcamp offering career-focused tech courses.",
+    "website": "https://www.codingninjas.com"
+  },
+  {
+    "id": 19,
+    "name": "Intellipaat",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "7 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Online certification training with industry partnerships.",
+    "website": "https://intellipaat.com"
+  },
+  {
+    "id": 20,
+    "name": "NIIT",
+    "location": "Delhi",
+    "mode": "offline",
+    "duration": "6 months",
+    "courses": ["Data Science", "Analytics", "AI"],
+    "description": "Global skills and talent development company.",
+    "website": "https://www.niit.com"
+  },
+  {
+    "id": 21,
+    "name": "TGC India",
+    "location": "Delhi",
+    "mode": "offline",
+    "duration": "3 months",
+    "courses": ["Data Science", "Python", "Data Analytics"],
+    "description": "IT training institute focused on practical skills.",
+    "website": "https://www.tgcindia.com"
+  },
+  {
+    "id": 22,
+    "name": "Besant Technologies",
+    "location": "Chennai",
+    "mode": "offline",
+    "duration": "4 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Technology training institute with multiple branches.",
+    "website": "https://www.besanttechnologies.com"
+  },
+  {
+    "id": 23,
+    "name": "ACTE Technologies",
+    "location": "Chennai",
+    "mode": "offline",
+    "duration": "4 months",
+    "courses": ["Data Science", "Python", "Machine Learning"],
+    "description": "IT certification training institute.",
+    "website": "https://www.acte.in"
+  },
+  {
+    "id": 24,
+    "name": "3RI Technologies",
+    "location": "Pune",
+    "mode": "offline",
+    "duration": "4 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Professional IT training center.",
+    "website": "https://www.3ritechnologies.com"
+  },
+  {
+    "id": 25,
+    "name": "SevenMentor",
+    "location": "Pune",
+    "mode": "offline",
+    "duration": "4 months",
+    "courses": ["Data Science", "Analytics", "Python"],
+    "description": "Technology training institute with career guidance.",
+    "website": "https://www.sevenmentor.com"
+  },
+  {
+    "id": 26,
+    "name": "DataMites",
+    "location": "Bangalore",
+    "mode": "offline",
+    "duration": "6 months",
+    "courses": ["Data Science", "Machine Learning", "Python"],
+    "description": "Global data science training institute.",
+    "website": "https://datamites.com"
+  },
+  {
+    "id": 27,
+    "name": "Board Infinity",
+    "location": "Mumbai",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI", "Analytics"],
+    "description": "Career platform offering mentorship-based courses.",
+    "website": "https://www.boardinfinity.com"
+  },
+  {
+    "id": 28,
+    "name": "SkillSlash",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "Machine Learning"],
+    "description": "Data science bootcamp with real industry projects.",
+    "website": "https://www.skillslash.com"
+  },
+  {
+    "id": 29,
+    "name": "iNeuron",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Edtech platform offering affordable tech education.",
+    "website": "https://ineuron.ai"
+  },
+  {
+    "id": 30,
+    "name": "Newton School",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "Python", "Machine Learning"],
+    "description": "Tech training institute focused on job-ready skills.",
+    "website": "https://www.newtonschool.co"
+  },
+  {
+    "id": 31,
+    "name": "DataTrained",
+    "location": "Delhi",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Career-oriented data science bootcamp.",
+    "website": "https://datatrained.com"
+  },
+  {
+    "id": 32,
+    "name": "TalentSprint",
+    "location": "Hyderabad",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI"],
+    "description": "Edtech platform collaborating with top universities.",
+    "website": "https://talentsprint.com"
+  },
+  {
+    "id": 33,
+    "name": "GreyAtom",
+    "location": "Mumbai",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "Machine Learning"],
+    "description": "Data science training company focused on industry skills.",
+    "website": "https://greyatom.com"
+  },
+  {
+    "id": 34,
+    "name": "Edureka",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Online tech training platform with instructor-led courses.",
+    "website": "https://www.edureka.co"
+  },
+  {
+    "id": 35,
+    "name": "Coursera Partner Programs",
+    "location": "Online",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "University-backed online certification courses.",
+    "website": "https://www.coursera.org"
+  },
+  {
+    "id": 36,
+    "name": "Udacity Nanodegree",
+    "location": "Online",
+    "mode": "online",
+    "duration": "5 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Project-based nano degree programs in tech.",
+    "website": "https://www.udacity.com"
+  },
+  {
+    "id": 37,
+    "name": "Springboard",
+    "location": "Online",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Science", "Machine Learning"],
+    "description": "Mentor-led data science training with job guarantee.",
+    "website": "https://www.springboard.com"
+  },
+  {
+    "id": 38,
+    "name": "BrainStation",
+    "location": "Online",
+    "mode": "online",
+    "duration": "5 months",
+    "courses": ["Data Science", "Analytics"],
+    "description": "Global digital skills training provider.",
+    "website": "https://brainstation.io"
+  },
+  {
+    "id": 39,
+    "name": "CareerFoundry",
+    "location": "Online",
+    "mode": "online",
+    "duration": "6 months",
+    "courses": ["Data Analytics", "Data Science"],
+    "description": "Mentor-driven career change programs.",
+    "website": "https://careerfoundry.com"
+  },
+  {
+    "id": 40,
+    "name": "Learnbay",
+    "location": "Bangalore",
+    "mode": "online",
+    "duration": "7 months",
+    "courses": ["Data Science", "AI", "Machine Learning"],
+    "description": "Advanced AI and data science training with placement support.",
+    "website": "https://www.learnbay.co"
   }
 ]
