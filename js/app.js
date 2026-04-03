@@ -36,21 +36,26 @@ return;
 const card = `
 <div class="col-md-6 col-lg-4">
 
-<div class="card internship-list-card p-3 mb-4">
+<div class="card internship-card shadow-sm p-3 h-100">
 
-<h6 class="fw-bold">${job.title}</h6>
+<div class="d-flex justify-content-between align-items-start mb-2">
 
-<p class="text-muted mb-2">
-${job.company} • ${job.location}
-</p>
+<div>
+<h5 class="fw-bold mb-1">${job.title}</h5>
+<p class="text-muted small mb-0">${job.company}</p>
+</div>
 
-<div class="tags mb-3">
+<span class="badge bg-light text-dark">${job.location}</span>
+
+</div>
+
+<div class="mb-3">
 ${job.skills.map(skill =>
-`<span class="badge bg-light text-dark">${skill}</span>`
+`<span class="badge bg-secondary me-1">${skill}</span>`
 ).join("")}
 </div>
 
-<div class="d-flex justify-content-between align-items-center">
+<div class="d-flex justify-content-between align-items-center mt-auto">
 
 <small class="text-muted">
 ${job.duration}
@@ -58,7 +63,7 @@ ${job.duration}
 
 <a href="pages/internship.html?id=${job.id}" 
 class="btn btn-primary btn-sm">
-View
+View Details
 </a>
 
 </div>
@@ -71,6 +76,9 @@ View
 
   });
 
+  // Update result count
+  document.getElementById("resultCount").innerText =
+    data.length + " internships found";
 }
 
 // ================= SEARCH =================

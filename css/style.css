@@ -73,16 +73,19 @@ opacity:0.7;
 }
 
 /* INTERNSHIP CARDS */
-
 .internship-card{
 border-radius:12px;
-transition:0.2s;
-border:1px solid #eee;
+transition:all 0.25s ease;
+cursor:pointer;
 }
 
 .internship-card:hover{
 transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.tags .badge{
+font-size:11px;
 }
 /* CTA */
 

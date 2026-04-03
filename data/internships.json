@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 51,
     "title": "Frontend Developer Intern",
     "company": "TechStart",
     "location": "Remote",
@@ -9,7 +9,7 @@
     "duration": "3 months"
   },
   {
-    "id": 2,
+    "id": 52,
     "title": "Data Science Intern",
     "company": "DataWave",
     "location": "Delhi",
@@ -18,12 +18,471 @@
     "duration": "4 months"
   },
   {
-    "id": 3,
+    "id": 53,
     "title": "Remote Marketing Intern",
     "company": "GrowthLab",
     "location": "Remote",
     "skills": ["SEO", "Content Writing", "Analysis"],
     "category": "remote",
     "duration": "2 months"
+  },
+  
+  {
+    "id": 1,
+    "title": "Data Science Intern",
+    "company": "DataWave",
+    "location": "Delhi",
+    "skills": ["Python", "Pandas", "Machine Learning"],
+    "category": "data",
+    "duration": "4 months"
+  },
+  {
+    "id": 2,
+    "title": "Machine Learning Intern",
+    "company": "TechNova",
+    "location": "Bangalore",
+    "skills": ["Python", "TensorFlow", "Deep Learning"],
+    "category": "ai",
+    "duration": "6 months"
+  },
+  {
+    "id": 3,
+    "title": "AI Research Intern",
+    "company": "InnovateAI",
+    "location": "Hyderabad",
+    "skills": ["Python", "NLP", "PyTorch"],
+    "category": "ai",
+    "duration": "5 months"
+  },
+  {
+    "id": 4,
+    "title": "Data Analyst Intern",
+    "company": "InsightLabs",
+    "location": "Gurugram",
+    "skills": ["Excel", "SQL", "Power BI"],
+    "category": "data",
+    "duration": "3 months"
+  },
+  {
+    "id": 5,
+    "title": "Python Developer Intern",
+    "company": "CodeNest",
+    "location": "Noida",
+    "skills": ["Python", "Flask", "APIs"],
+    "category": "development",
+    "duration": "4 months"
+  },
+  {
+    "id": 6,
+    "title": "Frontend Developer Intern",
+    "company": "WebCraft",
+    "location": "Remote",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "category": "development",
+    "duration": "3 months"
+  },
+  {
+    "id": 7,
+    "title": "Backend Developer Intern",
+    "company": "StackForge",
+    "location": "Pune",
+    "skills": ["Node.js", "Express", "MongoDB"],
+    "category": "development",
+    "duration": "6 months"
+  },
+  {
+    "id": 8,
+    "title": "Cloud Computing Intern",
+    "company": "SkyNet Cloud",
+    "location": "Bangalore",
+    "skills": ["AWS", "Docker", "Linux"],
+    "category": "cloud",
+    "duration": "4 months"
+  },
+  {
+    "id": 9,
+    "title": "Cybersecurity Intern",
+    "company": "SecureNet",
+    "location": "Delhi",
+    "skills": ["Network Security", "Ethical Hacking", "Linux"],
+    "category": "security",
+    "duration": "5 months"
+  },
+  {
+    "id": 10,
+    "title": "Mobile App Developer Intern",
+    "company": "AppSphere",
+    "location": "Chennai",
+    "skills": ["Flutter", "Dart", "Firebase"],
+    "category": "development",
+    "duration": "4 months"
+  },
+
+  {
+    "id": 11,
+    "title": "AI Engineer Intern",
+    "company": "FutureMind",
+    "location": "Bangalore",
+    "skills": ["Python", "Deep Learning", "TensorFlow"],
+    "category": "ai",
+    "duration": "6 months"
+  },
+  {
+    "id": 12,
+    "title": "Data Engineer Intern",
+    "company": "DataBridge",
+    "location": "Hyderabad",
+    "skills": ["Python", "SQL", "ETL"],
+    "category": "data",
+    "duration": "5 months"
+  },
+  {
+    "id": 13,
+    "title": "Business Analyst Intern",
+    "company": "InsightEdge",
+    "location": "Mumbai",
+    "skills": ["Excel", "Power BI", "SQL"],
+    "category": "analytics",
+    "duration": "3 months"
+  },
+  {
+    "id": 14,
+    "title": "DevOps Intern",
+    "company": "CloudOps",
+    "location": "Pune",
+    "skills": ["Docker", "Kubernetes", "CI/CD"],
+    "category": "cloud",
+    "duration": "6 months"
+  },
+  {
+    "id": 15,
+    "title": "Full Stack Developer Intern",
+    "company": "NextGenSoft",
+    "location": "Noida",
+    "skills": ["React", "Node.js", "MongoDB"],
+    "category": "development",
+    "duration": "4 months"
+  },
+
+  {
+    "id": 16,
+    "title": "Data Visualization Intern",
+    "company": "VizAnalytics",
+    "location": "Delhi",
+    "skills": ["Tableau", "Power BI", "Excel"],
+    "category": "data",
+    "duration": "3 months"
+  },
+  {
+    "id": 17,
+    "title": "NLP Intern",
+    "company": "TextMind AI",
+    "location": "Remote",
+    "skills": ["Python", "NLP", "Transformers"],
+    "category": "ai",
+    "duration": "5 months"
+  },
+  {
+    "id": 18,
+    "title": "Computer Vision Intern",
+    "company": "VisionTech",
+    "location": "Bangalore",
+    "skills": ["Python", "OpenCV", "Deep Learning"],
+    "category": "ai",
+    "duration": "6 months"
+  },
+  {
+    "id": 19,
+    "title": "Blockchain Developer Intern",
+    "company": "ChainWorks",
+    "location": "Hyderabad",
+    "skills": ["Solidity", "Ethereum", "Smart Contracts"],
+    "category": "blockchain",
+    "duration": "4 months"
+  },
+  {
+    "id": 20,
+    "title": "Game Developer Intern",
+    "company": "PixelForge",
+    "location": "Mumbai",
+    "skills": ["Unity", "C#", "Game Design"],
+    "category": "development",
+    "duration": "5 months"
+  },
+
+  {
+    "id": 21,
+    "title": "UI/UX Design Intern",
+    "company": "Designify",
+    "location": "Remote",
+    "skills": ["Figma", "UI Design", "Prototyping"],
+    "category": "design",
+    "duration": "3 months"
+  },
+  {
+    "id": 22,
+    "title": "Product Management Intern",
+    "company": "ProdWise",
+    "location": "Delhi",
+    "skills": ["Product Strategy", "Market Research"],
+    "category": "management",
+    "duration": "4 months"
+  },
+  {
+    "id": 23,
+    "title": "AI Chatbot Intern",
+    "company": "BotLabs",
+    "location": "Bangalore",
+    "skills": ["Python", "NLP", "Dialogflow"],
+    "category": "ai",
+    "duration": "4 months"
+  },
+  {
+    "id": 24,
+    "title": "Big Data Intern",
+    "company": "HadoopWorks",
+    "location": "Pune",
+    "skills": ["Hadoop", "Spark", "Scala"],
+    "category": "data",
+    "duration": "6 months"
+  },
+  {
+    "id": 25,
+    "title": "React Developer Intern",
+    "company": "FrontendHub",
+    "location": "Noida",
+    "skills": ["React", "JavaScript", "Redux"],
+    "category": "development",
+    "duration": "4 months"
+  },
+
+  {
+    "id": 26,
+    "title": "Python Automation Intern",
+    "company": "AutoScript",
+    "location": "Chennai",
+    "skills": ["Python", "Selenium", "Automation"],
+    "category": "development",
+    "duration": "3 months"
+  },
+  {
+    "id": 27,
+    "title": "AI Data Labeling Intern",
+    "company": "LabelWorks",
+    "location": "Remote",
+    "skills": ["Data Annotation", "Python"],
+    "category": "ai",
+    "duration": "3 months"
+  },
+  {
+    "id": 28,
+    "title": "Embedded Systems Intern",
+    "company": "CircuitLabs",
+    "location": "Bangalore",
+    "skills": ["C", "Microcontrollers", "IoT"],
+    "category": "hardware",
+    "duration": "5 months"
+  },
+  {
+    "id": 29,
+    "title": "IoT Developer Intern",
+    "company": "SmartTech",
+    "location": "Hyderabad",
+    "skills": ["IoT", "Arduino", "Python"],
+    "category": "hardware",
+    "duration": "4 months"
+  },
+  {
+    "id": 30,
+    "title": "Software Testing Intern",
+    "company": "QualitySoft",
+    "location": "Delhi",
+    "skills": ["Manual Testing", "Selenium"],
+    "category": "testing",
+    "duration": "3 months"
+  },
+
+  {
+    "id": 31,
+    "title": "SQL Developer Intern",
+    "company": "DataQuery",
+    "location": "Mumbai",
+    "skills": ["SQL", "Database Design"],
+    "category": "data",
+    "duration": "4 months"
+  },
+  {
+    "id": 32,
+    "title": "Data Mining Intern",
+    "company": "MineData",
+    "location": "Pune",
+    "skills": ["Python", "Data Mining"],
+    "category": "data",
+    "duration": "5 months"
+  },
+  {
+    "id": 33,
+    "title": "Angular Developer Intern",
+    "company": "WebDynamics",
+    "location": "Noida",
+    "skills": ["Angular", "TypeScript"],
+    "category": "development",
+    "duration": "4 months"
+  },
+  {
+    "id": 34,
+    "title": "AI Model Trainer Intern",
+    "company": "ModelWorks",
+    "location": "Remote",
+    "skills": ["Python", "Deep Learning"],
+    "category": "ai",
+    "duration": "6 months"
+  },
+  {
+    "id": 35,
+    "title": "Robotics Intern",
+    "company": "RoboTech",
+    "location": "Bangalore",
+    "skills": ["Robotics", "Python", "ROS"],
+    "category": "hardware",
+    "duration": "6 months"
+  },
+
+  {
+    "id": 36,
+    "title": "Kotlin Developer Intern",
+    "company": "AndroidLab",
+    "location": "Delhi",
+    "skills": ["Kotlin", "Android"],
+    "category": "development",
+    "duration": "4 months"
+  },
+  {
+    "id": 37,
+    "title": "Swift Developer Intern",
+    "company": "iOSCraft",
+    "location": "Remote",
+    "skills": ["Swift", "iOS Development"],
+    "category": "development",
+    "duration": "5 months"
+  },
+  {
+    "id": 38,
+    "title": "GraphQL Developer Intern",
+    "company": "APIForge",
+    "location": "Pune",
+    "skills": ["GraphQL", "Node.js"],
+    "category": "development",
+    "duration": "4 months"
+  },
+  {
+    "id": 39,
+    "title": "SEO Analyst Intern",
+    "company": "SearchBoost",
+    "location": "Delhi",
+    "skills": ["SEO", "Google Analytics"],
+    "category": "marketing",
+    "duration": "3 months"
+  },
+  {
+    "id": 40,
+    "title": "Digital Marketing Intern",
+    "company": "MarketPulse",
+    "location": "Mumbai",
+    "skills": ["Social Media", "SEO"],
+    "category": "marketing",
+    "duration": "3 months"
+  },
+
+  {
+    "id": 41,
+    "title": "Python Data Intern",
+    "company": "DataForge",
+    "location": "Bangalore",
+    "skills": ["Python", "NumPy", "Pandas"],
+    "category": "data",
+    "duration": "4 months"
+  },
+  {
+    "id": 42,
+    "title": "AI Prompt Engineer Intern",
+    "company": "PromptLabs",
+    "location": "Remote",
+    "skills": ["Prompt Engineering", "LLMs"],
+    "category": "ai",
+    "duration": "3 months"
+  },
+  {
+    "id": 43,
+    "title": "Cybersecurity Analyst Intern",
+    "company": "CyberShield",
+    "location": "Hyderabad",
+    "skills": ["Security Analysis", "Networking"],
+    "category": "security",
+    "duration": "5 months"
+  },
+  {
+    "id": 44,
+    "title": "Penetration Testing Intern",
+    "company": "HackSecure",
+    "location": "Delhi",
+    "skills": ["Ethical Hacking", "Kali Linux"],
+    "category": "security",
+    "duration": "4 months"
+  },
+  {
+    "id": 45,
+    "title": "Data Warehouse Intern",
+    "company": "WarehousePro",
+    "location": "Pune",
+    "skills": ["SQL", "ETL", "Data Warehousing"],
+    "category": "data",
+    "duration": "6 months"
+  },
+
+  {
+    "id": 46,
+    "title": "AI Voice Assistant Intern",
+    "company": "VoiceTech",
+    "location": "Bangalore",
+    "skills": ["Speech Recognition", "Python"],
+    "category": "ai",
+    "duration": "4 months"
+  },
+  {
+    "id": 47,
+    "title": "AR/VR Developer Intern",
+    "company": "RealityLabs",
+    "location": "Mumbai",
+    "skills": ["Unity", "ARCore"],
+    "category": "development",
+    "duration": "5 months"
+  },
+  {
+    "id": 48,
+    "title": "PHP Developer Intern",
+    "company": "WebMatrix",
+    "location": "Noida",
+    "skills": ["PHP", "MySQL"],
+    "category": "development",
+    "duration": "4 months"
+  },
+  {
+    "id": 49,
+    "title": "Laravel Developer Intern",
+    "company": "CodeBridge",
+    "location": "Delhi",
+    "skills": ["Laravel", "PHP"],
+    "category": "development",
+    "duration": "4 months"
+  },
+  {
+    "id": 50,
+    "title": "Software Engineer Intern",
+    "company": "NextWave Tech",
+    "location": "Bangalore",
+    "skills": ["Java", "Data Structures", "Algorithms"],
+    "category": "development",
+    "duration": "6 months"
   }
 ]
