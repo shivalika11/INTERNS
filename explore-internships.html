@@ -1,7 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,6 +18,7 @@
 
 <body>
 
+
 <!-- NAVBAR -->
 
 <header class="navbar">
@@ -26,9 +29,9 @@ SeekOn
 
 <div class="search-bar">
 
-<input type="text" placeholder="Internship in Design">
+<input id="searchInput" type="text" placeholder="Search internships">
 
-<input type="text" placeholder="Remote">
+<button id="searchBtn">Search</button>
 
 </div>
 
@@ -53,7 +56,8 @@ SeekOn
 <aside class="filters">
 
 <h3>Filters</h3>
-<p class="result-count">Found 124 results</p>
+
+<p id="resultCount">0 internships found</p>
 
 
 <h4>Job Type</h4>
@@ -75,7 +79,6 @@ SeekOn
 
 <input type="range">
 
-
 <button class="apply-filter">Apply Filters</button>
 
 <p class="clear">Clear All</p>
@@ -89,44 +92,32 @@ SeekOn
 <div class="results-section">
 
 
+<!-- SORT BAR -->
+
 <div class="sort-bar">
+
+<div>
 
 <span class="tag">Remote</span>
 <span class="tag">Design</span>
 
+</div>
+
 <div class="sort">
+
 Sort by: Relevance
-</div>
-
-</div>
-<div class="internship-card">
-
-<div class="internship-info">
-
-<h3>UI/UX Design Intern</h3>
-
-<p class="company">DesignStream AI</p>
-
-<div class="meta">
-
-<span>Remote</span>
-<span>Full-time</span>
-<span>$2500 / month</span>
 
 </div>
 
 </div>
 
-<button class="view-btn">View Details</button>
-
-</div>
 
 
-<!-- INTERNSHIP CARDS -->
+<!-- INTERNSHIP CARDS WILL RENDER HERE -->
 
-<div id="internshipsContainer" class="internship-list">
+<div id="internshipContainer" class="row g-3">
 
-<!-- JS will render internships here -->
+<!-- JS will insert internship cards here -->
 
 </div>
 
@@ -137,11 +128,15 @@ Sort by: Relevance
 <div class="pagination">
 
 <button><</button>
+
 <button class="active">1</button>
 <button>2</button>
 <button>3</button>
+
 <button>...</button>
+
 <button>12</button>
+
 <button>></button>
 
 </div>
@@ -153,7 +148,7 @@ Sort by: Relevance
 
 
 
-<!-- SUBSCRIBE -->
+<!-- SUBSCRIBE SECTION -->
 
 <section class="subscribe">
 
@@ -161,7 +156,7 @@ Sort by: Relevance
 
 <h2>Stay updated on new opportunities</h2>
 
-<p>Get custom job alerts delivered to your inbox.</p>
+<p>Get custom internship alerts delivered to your inbox.</p>
 
 </div>
 
@@ -195,7 +190,8 @@ Sort by: Relevance
 
 
 
-<script src="js/script.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>
+```
