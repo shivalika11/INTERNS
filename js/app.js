@@ -2,14 +2,39 @@
 
 let internships = [];
 
-async function loadInternships(){
+async function loadInternshipDetails(){
+
+const params = new URLSearchParams(window.location.search);
+const jobId = params.get("id");
+
+if(!jobId) return;
 
 const response = await fetch("data/internships.json");
-internships = await response.json();
+const internships = await response.json();
 
-console.log("Loaded:", internships);
+const job = internships.find(j => j.id == jobId);
 
-renderInternships();
+if(!job) return;
+
+document.getElementById("jobTitle").innerText = job.title;
+
+document.getElementById("jobCompany").innerText =
+job.company + " • " + job.location;
+
+document.getElementById("jobDuration").innerText = job.duration;
+
+document.getElementById("jobLocation").innerText = job.location;
+
+document.getElementById("jobType").innerText = job.type;
+
+document.getElementById("jobDescription").innerText = job.description;
+
+document.getElementById("jobSkills").innerHTML =
+job.skills.map(skill =>
+`<span class="badge bg-secondary me-1">${skill}</span>`
+).join("");
+
+document.getElementById("applyBtn").href = job.applyLink;
 
 }
 
