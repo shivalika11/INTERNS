@@ -507,13 +507,17 @@ gap:15px;
 width:48px;
 height:48px;
 border-radius:10px;
-background:#eef2ff;
 display:flex;
 align-items:center;
 justify-content:center;
-font-weight:600;
-font-size:18px;
-color:#4f46e5;
+overflow:hidden;
+}
+
+.company-logo img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:10px;
 }
 
 /* Job text */
@@ -538,6 +542,13 @@ margin-top:5px;
 font-size:13px;
 color:#777;
 margin-right:12px;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:5px;
+margin-top:8px;
 }
 
 /* Right side */
