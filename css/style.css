@@ -1,25 +1,12 @@
-/* GLOBAL */
+/* ================= GLOBAL ================= */
 
 body{
-
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
 background:#f5f7fb;
-
 margin:0;
-
 color:#111;
-
 }
-
-.brand-icon{
-background:#2563eb;
-color:white;
-padding:8px;
-border-radius:8px;
-}
-
-/* HERO */
+/* ================= HERO SECTION ================= */
 
 .hero{
 background:#f8f9fc;
@@ -321,247 +308,192 @@ margin:0;
 }
 }
 
-/* NAVBAR */
-
-
+/* ================= NAVBAR ================= */
 
 .navbar{
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
 padding:16px 40px;
-
 background:white;
-
 box-shadow:0 2px 12px rgba(0,0,0,0.05);
-
 position:sticky;
 top:0;
 z-index:100;
-
 }
 
-/* LOGO */
-
 .logo{
-
 font-size:22px;
 font-weight:700;
 color:#2563eb;
-
 }
 
-/* SEARCH BAR */
+/* Search */
 
 .nav-center{
-
 flex:1;
 display:flex;
 justify-content:center;
-
 }
 
 .search-box{
-
 display:flex;
 align-items:center;
-
 background:#f3f4f6;
-
 padding:8px 14px;
-
 border-radius:10px;
-
 width:420px;
-
 }
 
 .search-box i{
-
 color:#777;
 margin-right:8px;
-
 }
 
 .search-box input{
-
 border:none;
 outline:none;
-
 background:transparent;
-
 width:100%;
-
 font-size:14px;
-
 }
 
-/* RIGHT SIDE */
+/* Right icons */
 
 .nav-right{
-
 display:flex;
 align-items:center;
 gap:18px;
-
 font-size:18px;
-
 }
 
 .profile{
-
 width:34px;
 height:34px;
-
 border-radius:50%;
-
 background:#2563eb;
 color:white;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 font-weight:600;
-
 }
 
-/* MAIN LAYOUT */
+/* ================= PAGE WRAPPER ================= */
+
+.page-wrapper{
+max-width:1200px;
+margin:auto;
+padding:30px 20px;
+}
+
+/* ================= MAIN LAYOUT ================= */
 
 .main-container{
-
 display:flex;
-
 gap:30px;
-
-margin-top:30px;
-
 }
 
-/* SIDEBAR */
+/* ================= SIDEBAR FILTERS ================= */
 
 .filters{
-
 width:260px;
-
 background:white;
-
 padding:25px;
-
 border-radius:12px;
-
 box-shadow:0 4px 18px rgba(0,0,0,0.05);
-
+height:fit-content;
 }
 
-/* headings */
-
 .filters h3{
-
 margin-bottom:10px;
-
 }
 
 .filters h4{
-
 margin-top:20px;
 margin-bottom:8px;
-
 font-size:15px;
-
 }
-
-/* checkbox */
 
 .filters label{
-
 display:block;
-
 margin-bottom:6px;
-
 font-size:14px;
-
 color:#555;
-
 }
-
-/* range slider */
 
 .filters input[type="range"]{
-
 width:100%;
 margin:10px 0;
-
 }
 
-/* buttons */
-
 .apply-filter{
-
 margin-top:8px;
-
 background:#2563eb;
 color:white;
-
 border:none;
-
 padding:8px 12px;
-
 border-radius:6px;
-
 cursor:pointer;
-
 }
 
 .clear{
-
 margin-top:12px;
-
 font-size:13px;
-
 color:#2563eb;
-
 cursor:pointer;
-
 }
-/* RESULTS AREA */
+
+/* ================= RESULTS AREA ================= */
 
 .results-section{
 flex:1;
 }
 
-/* JOB CARD */
+/* ================= SORT BAR ================= */
 
-.job-card{
-
+.sort-bar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 background:white;
+padding:15px 20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
 
+/* Tags */
+
+.tag{
+background:#eef2ff;
+color:#4f46e5;
+padding:6px 12px;
+border-radius:6px;
+font-size:13px;
+margin-right:8px;
+}
+
+/* ================= JOB CARD ================= */
+
+.job-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
 padding:22px;
-
 margin-bottom:18px;
-
 border-radius:12px;
-
 box-shadow:0 4px 20px rgba(0,0,0,0.05);
-
 transition:all .2s ease;
-
 }
 
 .job-card:hover{
-
 transform:translateY(-2px);
-
 box-shadow:0 8px 25px rgba(0,0,0,0.08);
-
 }
-/* LEFT SIDE */
+
+/* Left side */
 
 .job-left{
 display:flex;
@@ -569,87 +501,70 @@ align-items:center;
 gap:15px;
 }
 
-.company-logo{
+/* Company logo */
 
+.company-logo{
 width:48px;
 height:48px;
-
 border-radius:10px;
-
 background:#eef2ff;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 font-weight:600;
 font-size:18px;
-
 color:#4f46e5;
-
 }
 
-/* JOB TEXT */
-
+/* Job text */
 
 .job-info h3{
-
 font-size:18px;
 font-weight:600;
 margin:0;
-
 }
 
 .company{
-
 font-size:14px;
 color:#666;
 margin-top:3px;
-
 }
 
 .meta{
-
 margin-top:5px;
-
 }
 
 .meta span{
-
 font-size:13px;
 color:#777;
 margin-right:12px;
-
 }
-/* BUTTON */
+
+/* Right side */
+
+.job-right{
+display:flex;
+align-items:center;
+}
+
+/* Button */
 
 .view-btn{
-
 background:#2563eb;
-
 color:white;
-
 padding:9px 16px;
-
 border-radius:8px;
-
 text-decoration:none;
-
 font-size:14px;
-
 font-weight:500;
-
 transition:all .2s;
-
 }
 
 .view-btn:hover{
-
 background:#0c35a4;
-
 }
 
-/* PAGINATION */
+/* ================= PAGINATION ================= */
 
 .pagination{
 text-align:center;
@@ -662,6 +577,7 @@ padding:8px 12px;
 border:1px solid #ddd;
 background:white;
 cursor:pointer;
+border-radius:6px;
 }
 
 .pagination .active{
@@ -669,15 +585,14 @@ background:#2563eb;
 color:white;
 }
 
-
-/* SUBSCRIBE */
+/* ================= SUBSCRIBE ================= */
 
 .subscribe{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:40px;
-background:#fff;
+background:white;
 margin-top:40px;
 }
 
@@ -693,10 +608,10 @@ background:#2563eb;
 color:white;
 border:none;
 border-radius:6px;
+cursor:pointer;
 }
 
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
 display:flex;

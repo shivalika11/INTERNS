@@ -1,4 +1,3 @@
-
 // ================= GLOBAL DATA =================
 
 let internships = [];
@@ -7,20 +6,29 @@ let internships = [];
 // ================= LOAD INTERNSHIPS =================
 
 async function loadInternships() {
+
   try {
+
     const response = await fetch("data/internships.json");
     internships = await response.json();
+
     renderInternships();
+
   } catch (error) {
+
     console.error("Error loading internships:", error);
+
   }
+
 }
 
 
 // ================= RENDER ALL =================
 
 function renderInternships() {
+
   renderFilteredInternships(internships, "internshipContainer");
+
 }
 
 
@@ -29,59 +37,73 @@ function renderInternships() {
 function renderFilteredInternships(data, containerId) {
 
   const container = document.getElementById(containerId);
+
   if (!container) return;
 
   container.innerHTML = "";
 
   if (data.length === 0) {
+
     container.innerHTML = "<p>No internships found.</p>";
     return;
+
   }
 
   data.forEach(job => {
 
-   const card = `
-<div class="job-card">
+    const skills = job.skills
+      ? job.skills.map(skill => `<span class="tag">${skill}</span>`).join("")
+      : "";
 
-<div class="job-left">
+    const logo = job.logo ? `<img src="${job.logo}" alt="${job.company} logo">` : (job.company ? job.company.charAt(0).toUpperCase() : "C");
 
-<div class="company-logo">
-${job.company[0]}
-</div>
+    const card = `
+    
+    <div class="job-card">
 
-<div class="job-info">
+      <div class="job-left">
 
-<h3>${job.title}</h3>
+        <div class="company-logo">
+          ${logo}
+        </div>
 
-<p class="company">${job.company}</p>
+        <div class="job-info">
 
-<div class="meta">
+          <h3>${job.title}</h3>
 
-<span>${job.location}</span>
-<span>${job.duration}</span>
+          <p class="company">${job.company}</p>
 
-</div>
+          <div class="meta">
+            <span>${job.location}</span>
+            <span>${job.duration}</span>
+          </div>
 
-</div>
+          <div class="skills">
+            ${skills}
+          </div>
 
-</div>
+        </div>
 
-<div class="job-right">
+      </div>
 
-<a href="pages/internship.html?id=${job.id}" class="view-btn">
-View Details
-</a>
+      <div class="job-right">
 
-</div>
+        <a href="pages/internship.html?id=${job.id}" class="view-btn">
+          View Details
+        </a>
 
-</div>
-`;
+      </div>
+
+    </div>
+    
+    `;
 
     container.innerHTML += card;
 
   });
 
   const resultCount = document.getElementById("resultCount");
+
   if (resultCount) {
     resultCount.innerText = data.length + " internships found";
   }
@@ -94,6 +116,7 @@ View Details
 function handleSearch() {
 
   const input = document.getElementById("searchInput");
+
   if (!input) return;
 
   const keyword = input.value.toLowerCase();
@@ -101,9 +124,13 @@ function handleSearch() {
   const filtered = internships.filter(job => {
 
     return (
+
       job.title.toLowerCase().includes(keyword) ||
+
       job.company.toLowerCase().includes(keyword) ||
-      job.skills.join(" ").toLowerCase().includes(keyword)
+
+      (job.skills && job.skills.join(" ").toLowerCase().includes(keyword))
+
     );
 
   });
@@ -118,15 +145,20 @@ function handleSearch() {
 function filterByTag(tag) {
 
   if (tag === "all") {
+
     renderInternships();
     return;
+
   }
 
   const filtered = internships.filter(job => {
 
     return (
+
       job.category === tag ||
+
       job.location.toLowerCase().includes(tag)
+
     );
 
   });
@@ -141,6 +173,7 @@ function filterByTag(tag) {
 async function loadInternshipDetails() {
 
   const params = new URLSearchParams(window.location.search);
+
   const jobId = params.get("id");
 
   if (!jobId) return;
@@ -148,6 +181,7 @@ async function loadInternshipDetails() {
   try {
 
     const response = await fetch("../data/internships.json");
+
     const internships = await response.json();
 
     const job = internships.find(j => j.id == jobId);
@@ -172,19 +206,25 @@ async function loadInternshipDetails() {
     if (desc) desc.innerText = job.description || "";
 
     const skills = document.getElementById("jobSkills");
+
     if (skills) {
+
       skills.innerHTML = job.skills.map(skill =>
-        `<span class="badge text-bg-light me-1">${skill}</span>`
+        `<span class="tag">${skill}</span>`
       ).join("");
+
     }
 
     const applyBtn = document.getElementById("applyBtn");
+
     if (applyBtn) {
       applyBtn.href = job.applyLink || "#";
     }
 
   } catch (error) {
+
     console.error("Error loading job details:", error);
+
   }
 
 }
@@ -195,21 +235,21 @@ async function loadInternshipDetails() {
 document.addEventListener("DOMContentLoaded", function () {
 
   loadInternships();
+
   loadInternshipDetails();
 
-  const searchBtn = document.getElementById("searchBtn");
-  if (searchBtn) {
-    searchBtn.addEventListener("click", handleSearch);
-  }
-
   const searchInput = document.getElementById("searchInput");
+
   if (searchInput) {
+
     searchInput.addEventListener("keypress", function (e) {
+
       if (e.key === "Enter") {
         handleSearch();
       }
+
     });
+
   }
 
 });
-

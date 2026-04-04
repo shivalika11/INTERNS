@@ -14,12 +14,10 @@
 
 </head>
 
-
 <body>
 
 
 <!-- NAVBAR -->
-
 
 <header class="navbar">
 
@@ -27,15 +25,13 @@
 <h2 class="logo">SeekOn</h2>
 </div>
 
-
 <div class="nav-center">
 
 <div class="search-box">
-
 <i class="bi bi-search"></i>
 
-<input 
-type="text" 
+<input
+type="text"
 placeholder="Search internships, companies..."
 id="searchInput"
 >
@@ -44,26 +40,26 @@ id="searchInput"
 
 </div>
 
-
 <div class="nav-right">
 
 <i class="bi bi-bell"></i>
-
 <i class="bi bi-chat-dots"></i>
 
-<div class="profile">
-S
-</div>
+<div class="profile">S</div>
 
 </div>
 
 </header>
-<!-- MAIN LAYOUT -->
+
+
+
+<div class="page-wrapper">
+
 
 <section class="main-container">
 
 
-<!-- LEFT FILTERS -->
+<!-- SIDEBAR -->
 
 <aside class="filters">
 
@@ -97,15 +93,9 @@ S
 
 </aside>
 
-<div class="page-container">
 
-<section class="main-container">
-...
-</section>
 
-</div>
-
-<!-- RIGHT CONTENT -->
+<!-- RESULTS -->
 
 <div class="results-section">
 
@@ -114,28 +104,24 @@ S
 
 <div class="sort-bar">
 
-<div>
-
+<div class="tags">
 <span class="tag">Remote</span>
 <span class="tag">Design</span>
-
 </div>
 
 <div class="sort">
-
 Sort by: Relevance
-
 </div>
 
 </div>
 
 
 
-<!-- INTERNSHIP CARDS WILL RENDER HERE -->
+<!-- INTERNSHIP CARDS -->
 
-<div id="internshipContainer" class="row g-3">
+<div id="internshipContainer">
 
-<!-- JS will insert internship cards here -->
+<!-- JS will render cards here -->
 
 </div>
 
@@ -145,7 +131,7 @@ Sort by: Relevance
 
 <div class="pagination">
 
-<button><</button>
+<button>&lt;</button>
 
 <button class="active">1</button>
 <button>2</button>
@@ -155,7 +141,7 @@ Sort by: Relevance
 
 <button>12</button>
 
-<button>></button>
+<button>&gt;</button>
 
 </div>
 
@@ -164,9 +150,11 @@ Sort by: Relevance
 
 </section>
 
+</div>
 
 
-<!-- SUBSCRIBE SECTION -->
+
+<!-- SUBSCRIBE -->
 
 <section class="subscribe">
 
@@ -207,8 +195,8 @@ Sort by: Relevance
 </footer>
 
 
-
 <script src="js/app.js"></script>
 
 </body>
+
 </html>
