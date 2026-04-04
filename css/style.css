@@ -1,8 +1,15 @@
 /* GLOBAL */
 
 body{
-font-family: system-ui, sans-serif;
-background:#f8f9fb;
+
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+background:#f5f7fb;
+
+margin:0;
+
+color:#111;
+
 }
 
 .brand-icon{
@@ -313,9 +320,10 @@ background:#f6f7fb;
 margin:0;
 }
 }
-/* NAVBAR */
 
 /* NAVBAR */
+
+
 
 .navbar{
 
