@@ -315,137 +315,331 @@ margin:0;
 }
 /* NAVBAR */
 
+/* NAVBAR */
+
 .navbar{
+
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:15px 40px;
+justify-content:space-between;
+
+padding:16px 40px;
+
 background:white;
-border-bottom:1px solid #eee;
+
+box-shadow:0 2px 12px rgba(0,0,0,0.05);
+
+position:sticky;
+top:0;
+z-index:100;
+
 }
+
+/* LOGO */
 
 .logo{
+
 font-size:22px;
-font-weight:bold;
+font-weight:700;
+color:#2563eb;
+
 }
 
-.search-bar input{
-padding:10px;
-margin-right:10px;
-border-radius:6px;
-border:1px solid #ccc;
+/* SEARCH BAR */
+
+.nav-center{
+
+flex:1;
+display:flex;
+justify-content:center;
+
 }
 
-.nav-icons i{
-font-size:20px;
-margin-left:15px;
-cursor:pointer;
+.search-box{
+
+display:flex;
+align-items:center;
+
+background:#f3f4f6;
+
+padding:8px 14px;
+
+border-radius:10px;
+
+width:420px;
+
 }
 
+.search-box i{
+
+color:#777;
+margin-right:8px;
+
+}
+
+.search-box input{
+
+border:none;
+outline:none;
+
+background:transparent;
+
+width:100%;
+
+font-size:14px;
+
+}
+
+/* RIGHT SIDE */
+
+.nav-right{
+
+display:flex;
+align-items:center;
+gap:18px;
+
+font-size:18px;
+
+}
+
+.profile{
+
+width:34px;
+height:34px;
+
+border-radius:50%;
+
+background:#2563eb;
+color:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-weight:600;
+
+}
 
 /* MAIN LAYOUT */
 
 .main-container{
+
 display:flex;
-padding:30px;
+
 gap:30px;
+
+margin-top:30px;
+
 }
 
-
-/* FILTERS */
+/* SIDEBAR */
 
 .filters{
-width:250px;
+
+width:260px;
+
 background:white;
-padding:20px;
-border-radius:10px;
+
+padding:25px;
+
+border-radius:12px;
+
+box-shadow:0 4px 18px rgba(0,0,0,0.05);
+
+}
+
+/* headings */
+
+.filters h3{
+
+margin-bottom:10px;
+
 }
 
 .filters h4{
+
 margin-top:20px;
+margin-bottom:8px;
+
+font-size:15px;
+
 }
+
+/* checkbox */
 
 .filters label{
+
 display:block;
-margin:8px 0;
+
+margin-bottom:6px;
+
+font-size:14px;
+
+color:#555;
+
 }
 
-.apply-filter{
-margin-top:20px;
+/* range slider */
+
+.filters input[type="range"]{
+
 width:100%;
-padding:10px;
+margin:10px 0;
+
+}
+
+/* buttons */
+
+.apply-filter{
+
+margin-top:8px;
+
 background:#2563eb;
 color:white;
+
 border:none;
+
+padding:8px 12px;
+
 border-radius:6px;
+
+cursor:pointer;
+
 }
 
 .clear{
-margin-top:10px;
+
+margin-top:12px;
+
+font-size:13px;
+
 color:#2563eb;
+
 cursor:pointer;
+
 }
-
-
-/* RESULTS */
+/* RESULTS AREA */
 
 .results-section{
 flex:1;
 }
 
-.sort-bar{
-display:flex;
-justify-content:space-between;
-margin-bottom:20px;
-}
+/* JOB CARD */
 
-.tag{
-background:#e5edff;
-padding:6px 12px;
-border-radius:20px;
-margin-right:10px;
-}
+.job-card{
 
-
-/* INTERNSHIP CARD */
-
-.internship-card{
-background:white;
-padding:20px;
-border-radius:10px;
-margin-bottom:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 8px rgba(0,0,0,0.05);
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:12px;
+
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+
+transition:all .2s ease;
+
 }
 
-.internship-info h3{
+.job-card:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+}
+/* LEFT SIDE */
+
+.job-left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.company-logo{
+
+width:48px;
+height:48px;
+
+border-radius:10px;
+
+background:#eef2ff;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-weight:600;
+font-size:18px;
+
+color:#4f46e5;
+
+}
+
+/* JOB TEXT */
+
+
+.job-info h3{
+
+font-size:18px;
+font-weight:600;
 margin:0;
+
 }
 
 .company{
+
+font-size:14px;
 color:#666;
-margin:5px 0;
+margin-top:3px;
+
+}
+
+.meta{
+
+margin-top:5px;
+
 }
 
 .meta span{
-margin-right:10px;
-background:#f1f5f9;
-padding:5px 10px;
-border-radius:5px;
-font-size:12px;
+
+font-size:13px;
+color:#777;
+margin-right:12px;
+
 }
+/* BUTTON */
 
 .view-btn{
+
 background:#2563eb;
+
 color:white;
-border:none;
-padding:10px 15px;
-border-radius:6px;
-cursor:pointer;
+
+padding:9px 16px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+font-size:14px;
+
+font-weight:500;
+
+transition:all .2s;
+
 }
 
+.view-btn:hover{
+
+background:#0c35a4;
+
+}
 
 /* PAGINATION */
 

@@ -40,44 +40,42 @@ function renderFilteredInternships(data, containerId) {
 
   data.forEach(job => {
 
-    const card = `
-    <div class="col-md-6 col-lg-4">
+   const card = `
+<div class="job-card">
 
-      <div class="card internship-card shadow-sm p-3 h-100">
+<div class="job-left">
 
-        <div class="d-flex justify-content-between align-items-start mb-2">
+<div class="company-logo">
+${job.company[0]}
+</div>
 
-          <div>
-            <h5 class="fw-bold mb-1">${job.title}</h5>
-            <p class="text-muted small mb-0">${job.company}</p>
-          </div>
+<div class="job-info">
 
-          <span class="badge bg-light text-dark">${job.location}</span>
+<h3>${job.title}</h3>
 
-        </div>
+<p class="company">${job.company}</p>
 
-        <div class="mb-3">
-          ${job.skills.map(skill =>
-            `<span class="badge bg-secondary me-1">${skill}</span>`
-          ).join("")}
-        </div>
+<div class="meta">
 
-        <div class="d-flex justify-content-between align-items-center mt-auto">
+<span>${job.location}</span>
+<span>${job.duration}</span>
 
-          <small class="text-muted">
-            ${job.duration}
-          </small>
+</div>
 
-          <a href="pages/internship.html?id=${job.id}" class="btn btn-primary btn-sm">
-            View Details
-          </a>
+</div>
 
-        </div>
+</div>
 
-      </div>
+<div class="job-right">
 
-    </div>
-    `;
+<a href="pages/internship.html?id=${job.id}" class="view-btn">
+View Details
+</a>
+
+</div>
+
+</div>
+`;
 
     container.innerHTML += card;
 
