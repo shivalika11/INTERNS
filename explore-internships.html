@@ -1,202 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Explore Internships | SeekOn</title>
-
+<title>SeekOn Jobs</title>
 <link rel="stylesheet" href="css/style.css">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
 
+<header>
+<div class="logo">SeekOn</div>
 
-<!-- NAVBAR -->
-
-<header class="navbar">
-
-<div class="nav-left">
-<h2 class="logo">SeekOn</h2>
+<div class="search">
+<input type="text" id="searchInput" placeholder="Search internships...">
+<div class="badge">Remote</div>
 </div>
 
-<div class="nav-center">
-
-<div class="search-box">
-<i class="bi bi-search"></i>
-
-<input
-type="text"
-placeholder="Search internships, companies..."
-id="searchInput"
->
-
+<div class="icons">
+<i class="fa-regular fa-bell"></i>
+<i class="fa-regular fa-bookmark"></i>
+<div class="avatar">U</div>
 </div>
-
-</div>
-
-<div class="nav-right">
-
-<i class="bi bi-bell"></i>
-<i class="bi bi-chat-dots"></i>
-
-<div class="profile">S</div>
-
-</div>
-
 </header>
 
+<div class="container">
 
+<aside class="sidebar">
+<h4>Filters</h4>
 
-<div class="page-wrapper">
-
-
-<section class="main-container">
-
-
-<!-- SIDEBAR -->
-
-<aside class="filters">
-
-<h3>Filters</h3>
-
-<p id="resultCount">0 internships found</p>
-
-
+<div class="filter-group">
 <h4>Job Type</h4>
+<label><input type="checkbox" value="Full-time"> Full-time</label>
+<label><input type="checkbox" value="Part-time"> Part-time</label>
+<label><input type="checkbox" value="Remote"> Remote</label>
+<label><input type="checkbox" value="Contract"> Contract</label>
+</div>
 
-<label><input type="checkbox"> Full-time</label>
-<label><input type="checkbox"> Part-time</label>
-<label><input type="checkbox"> Remote</label>
-<label><input type="checkbox"> Contract</label>
-
-
-<h4>Experience Level</h4>
-
-<label><input type="checkbox"> Internship</label>
-<label><input type="checkbox"> Entry Level</label>
-<label><input type="checkbox"> Mid Level</label>
-
-
-<h4>Salary Range</h4>
-
-<input type="range">
-
-<button class="apply-filter">Apply Filters</button>
-
-<p class="clear">Clear All</p>
-
+<button class="primary" id="applyBtn">Apply Filters</button>
 </aside>
 
+<main class="main">
 
-
-<!-- RESULTS -->
-
-<div class="results-section">
-
-
-<!-- SORT BAR -->
-
-<div class="sort-bar">
-
-<div class="tags">
-<span class="tag">Remote</span>
-<span class="tag">Design</span>
+<div class="top-bar">
+<div class="tags" id="activeTags"></div>
+<div>Sort by: Relevance</div>
 </div>
 
-<div class="sort">
-Sort by: Relevance
+<div id="jobList"></div>
+
+</main>
 </div>
-
-</div>
-
-
-
-<!-- INTERNSHIP CARDS -->
-
-<div id="internshipContainer">
-
-<!-- JS will render cards here -->
-
-</div>
-
-
-
-<!-- PAGINATION -->
-
-<div class="pagination">
-
-<button>&lt;</button>
-
-<button class="active">1</button>
-<button>2</button>
-<button>3</button>
-
-<button>...</button>
-
-<button>12</button>
-
-<button>&gt;</button>
-
-</div>
-
-
-</div>
-
-</section>
-
-</div>
-
-
-
-<!-- SUBSCRIBE -->
-
-<section class="subscribe">
-
-<div class="subscribe-text">
-
-<h2>Stay updated on new opportunities</h2>
-
-<p>Get custom internship alerts delivered to your inbox.</p>
-
-</div>
-
-<div class="subscribe-form">
-
-<input type="email" placeholder="Enter your email">
-
-<button>Subscribe</button>
-
-</div>
-
-</section>
-
-
-
-<!-- FOOTER -->
 
 <footer>
-
-<p>© 2024 SeekOn Internship Platform. All rights reserved.</p>
-
-<div class="footer-links">
-
+<div>© 2024 SeekOn Internship Platform. All rights reserved.</div>
+<div>
 <a href="#">Privacy Policy</a>
-<a href="#">Terms of Service</a>
-<a href="#">Help Center</a>
-
+<a href="#">Terms</a>
 </div>
-
 </footer>
 
-
-<script src="js/app.js"></script>
-
+<script src="script.js"></script>
 </body>
-
 </html>

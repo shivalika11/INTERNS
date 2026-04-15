@@ -253,3 +253,65 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+let jobs = [];
+
+fetch('jobs.json')
+.then(res => res.json())
+.then(data => {
+jobs = data;
+renderJobs(jobs);
+});
+
+function renderJobs(data){
+const container = document.getElementById('jobList');
+container.innerHTML = '';
+
+data.forEach(job => {
+container.innerHTML += `
+<div class="card">
+<div class="card-left">
+<div class="icon">${job.company[0]}</div>
+<div>
+<h3>${job.title}</h3>
+<div class="meta">${job.company} • ${job.location} • ${job.type}</div>
+<div class="salary">${job.salary || ''}</div>
+</div>
+</div>
+<button class="btn">View Details</button>
+</div>
+`;
+});
+}
+
+document.getElementById('applyBtn').addEventListener('click', () => {
+const checkboxes = document.querySelectorAll('.filter-group input:checked');
+const values = Array.from(checkboxes).map(cb => cb.value);
+
+const filtered = jobs.filter(job => {
+if(values.length === 0) return true;
+return values.includes(job.type) || values.includes(job.location);
+});
+
+renderJobs(filtered);
+renderTags(values);
+});
+
+function renderTags(tags){
+const tagContainer = document.getElementById('activeTags');
+tagContainer.innerHTML = '';
+
+tags.forEach(tag=>{
+tagContainer.innerHTML += `<div class="tag">${tag}</div>`;
+});
+}
+
+document.getElementById('searchInput').addEventListener('input', e=>{
+const val = e.target.value.toLowerCase();
+
+const filtered = jobs.filter(job =>
+job.title.toLowerCase().includes(val) ||
+job.company.toLowerCase().includes(val)
+);
+
+renderJobs(filtered);
+});
