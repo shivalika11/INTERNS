@@ -647,6 +647,11 @@ border-bottom:1px solid #e5e7eb
 
 .logo{font-weight:700;font-size:18px}
 
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .search{
 flex:1;
 margin:0 16px;
@@ -658,7 +663,8 @@ gap:8px
 flex:1;
 padding:10px;
 border:1px solid #ddd;
-border-radius:6px
+border-radius:6px;
+max-width: 300px;
 }
 
 .badge{
