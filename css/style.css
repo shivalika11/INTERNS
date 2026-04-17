@@ -686,10 +686,31 @@ justify-content:center;
 font-size:12px
 }
 
-.container{
-display:flex;
-padding:24px;
-gap:24px
+/* Only apply explore page layout to actual explore containers */
+.explore-container {
+display:grid;
+grid-template-columns:280px 1fr;
+gap:24px;
+max-width:1200px;
+margin:32px auto;
+padding:0 20px;
+}
+
+/* Fallback for the .container used in explore pages */
+body > .container {
+display:grid;
+grid-template-columns:280px 1fr;
+gap:24px;
+max-width:1200px;
+margin:32px auto;
+padding:0 20px;
+}
+
+body > section > .container {
+display:block !important;
+max-width:1200px;
+margin:0 auto;
+padding:0 20px;
 }
 
 .sidebar{
