@@ -13,8 +13,9 @@
 <div class="logo">SeekOn</div>
 
 <div class="search">
-<input type="text" id="searchInput" placeholder="Search internships...">
-<div class="badge">Remote</div>
+  <input type="text" id="searchInput" placeholder="Search internships...">
+  <button id="searchBtn" class="search-btn">Search</button>
+  <div class="badge">Remote</div>
 </div>
 
 <div class="icons">
@@ -27,24 +28,42 @@
 <div class="container">
 
 <aside class="sidebar">
-<h4>Filters</h4>
+  <h4>Filters</h4>
 
-<div class="filter-group">
-<h4>Job Type</h4>
-<label><input type="checkbox" value="Full-time"> Full-time</label>
-<label><input type="checkbox" value="Part-time"> Part-time</label>
-<label><input type="checkbox" value="Remote"> Remote</label>
-<label><input type="checkbox" value="Contract"> Contract</label>
-</div>
+  <div class="filter-group job-type">
+    <h4>Job Type</h4>
+    <label><input type="checkbox" value="Full-time"> Full-time</label>
+    <label><input type="checkbox" value="Part-time"> Part-time</label>
+    <label><input type="checkbox" value="Remote"> Remote</label>
+    <label><input type="checkbox" value="Contract"> Contract</label>
+  </div>
 
-<button class="primary" id="filterBtn">Apply Filters</button>
+  <div class="filter-group experience-level">
+    <h4>Experience Level</h4>
+    <label><input type="radio" name="experience" value="All" checked> All</label>
+    <label><input type="radio" name="experience" value="Internship"> Internship</label>
+    <label><input type="radio" name="experience" value="Mid"> Mid</label>
+  </div>
+
+  <div class="filter-group salary-range">
+    <h4>Salary range</h4>
+    <div class="salary-inputs">
+      <input type="number" id="salaryMin" placeholder="Min ₹" min="0">
+      <input type="number" id="salaryMax" placeholder="Max ₹" min="0">
+    </div>
+  </div>
+
+  <button class="primary" id="filterBtn">Apply Filters</button>
 </aside>
 
 <main class="main">
 
 <div class="top-bar">
-<div class="tags" id="activeTags"></div>
-<div>Sort by: Relevance</div>
+  <div class="top-left">
+    <div class="tags" id="activeTags"></div>
+    <div id="resultCount" class="result-count"></div>
+  </div>
+  <div>Sort by: Relevance</div>
 </div>
 
 <div id="jobList"></div>

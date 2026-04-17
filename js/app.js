@@ -59,6 +59,8 @@ function renderFilteredInternships(data, containerId) {
       : "";
 
     const logo = job.logo ? `<img src="${job.logo}" alt="${job.company} logo">` : (job.company ? job.company.charAt(0).toUpperCase() : "C");
+    const salaryLabel = job.salary ? formatSalary(job.salary) : "Salary undisclosed";
+    const experienceLabel = job.experience ? `<span class="experience-chip">${job.experience}</span>` : "";
 
     const card = `
     
@@ -79,6 +81,11 @@ function renderFilteredInternships(data, containerId) {
           <div class="meta">
             <span>${job.location}</span>
             <span>${job.duration}</span>
+          </div>
+
+          <div class="meta">
+            <span class="salary-chip">${salaryLabel}</span>
+            ${experienceLabel}
           </div>
 
           <div class="skills">
@@ -105,41 +112,80 @@ function renderFilteredInternships(data, containerId) {
 
   });
 
+  updateResultCount(data.length);
+}
+
+function updateResultCount(count) {
   const resultCount = document.getElementById("resultCount");
-
   if (resultCount) {
-    resultCount.innerText = data.length + " internships found";
+    resultCount.innerText = count + " internships found";
   }
-
 }
 
 
 // ================= SEARCH =================
 
 function handleSearch() {
+  applyFilters();
+}
 
-  const input = document.getElementById("searchInput");
+function applyFilters() {
+  const keyword = document.getElementById("searchInput")?.value.toLowerCase().trim() || "";
+  const selectedTypes = Array.from(document.querySelectorAll('.filter-group.job-type input[type="checkbox"]:checked'))
+    .map(cb => cb.value.toLowerCase());
+  const experience = document.querySelector('input[name="experience"]:checked')?.value || "All";
+  const minSalary = Number(document.getElementById("salaryMin")?.value) || 0;
+  const maxSalary = document.getElementById("salaryMax")?.value
+    ? Number(document.getElementById("salaryMax").value)
+    : Infinity;
 
-  if (!input) return;
+  const tags = [];
+  if (selectedTypes.length > 0) {
+    tags.push(...selectedTypes.map(type => type.charAt(0).toUpperCase() + type.slice(1)));
+  }
+  if (experience && experience !== "All") {
+    tags.push(experience);
+  }
+  if (minSalary > 0 || isFinite(maxSalary)) {
+    const minLabel = minSalary > 0 ? formatSalary(minSalary) : "Any";
+    const maxLabel = isFinite(maxSalary) ? formatSalary(maxSalary) : "Any";
+    tags.push(`Salary: ${minLabel} - ${maxLabel}`);
+  }
 
-  const keyword = input.value.toLowerCase();
+  renderTags(tags);
 
   const filtered = internships.filter(job => {
-
-    return (
-
+    const jobSalary = Number(job.salary) || 0;
+    const matchesSearch = !keyword ||
       job.title.toLowerCase().includes(keyword) ||
-
       job.company.toLowerCase().includes(keyword) ||
+      job.location.toLowerCase().includes(keyword) ||
+      job.category.toLowerCase().includes(keyword) ||
+      (job.skills && job.skills.join(" ").toLowerCase().includes(keyword));
 
-      (job.skills && job.skills.join(" ").toLowerCase().includes(keyword))
+    const matchesType = selectedTypes.length === 0 || selectedTypes.some(type => {
+      return job.type?.toLowerCase() === type ||
+        job.location?.toLowerCase().includes(type) ||
+        job.category?.toLowerCase().includes(type);
+    });
 
-    );
+    const matchesExperience = experience === "All" ||
+      job.experience?.toLowerCase() === experience.toLowerCase();
 
+    const matchesSalary = jobSalary >= minSalary && jobSalary <= maxSalary;
+
+    return matchesSearch && matchesType && matchesExperience && matchesSalary;
   });
 
   renderFilteredInternships(filtered, getInternshipContainerId());
+}
 
+function formatSalary(amount) {
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  }).format(amount);
 }
 
 
@@ -244,49 +290,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("searchInput");
 
   if (searchInput) {
-
     searchInput.addEventListener("keypress", function (e) {
-
       if (e.key === "Enter") {
         handleSearch();
       }
-
     });
+  }
 
+  const searchButton = document.getElementById("searchBtn");
+  if (searchButton) {
+    searchButton.addEventListener("click", applyFilters);
   }
 
   const filterButton = document.getElementById("filterBtn");
-
   if (filterButton) {
-    filterButton.addEventListener("click", applyCheckboxFilters);
+    filterButton.addEventListener("click", applyFilters);
   }
 
 });
-
-function applyCheckboxFilters() {
-  const checkboxes = document.querySelectorAll('.filter-group input:checked');
-  const values = Array.from(checkboxes).map(cb => cb.value.toLowerCase());
-
-  renderTags(values);
-
-  if (values.length === 0) {
-    renderInternships();
-    return;
-  }
-
-  const filtered = internships.filter(job => {
-    return values.some(value => {
-      return (
-        job.type?.toLowerCase() === value ||
-        job.location?.toLowerCase().includes(value) ||
-        job.category?.toLowerCase() === value ||
-        (job.skills && job.skills.some(skill => skill.toLowerCase() === value))
-      );
-    });
-  });
-
-  renderFilteredInternships(filtered, getInternshipContainerId());
-}
 
 function renderTags(tags) {
   const tagContainer = document.getElementById('activeTags');
