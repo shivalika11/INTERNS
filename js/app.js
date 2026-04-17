@@ -25,10 +25,13 @@ async function loadInternships() {
 
 // ================= RENDER ALL =================
 
+function getInternshipContainerId() {
+  const container = document.getElementById("internshipContainer") || document.getElementById("jobList");
+  return container ? container.id : "internshipContainer";
+}
+
 function renderInternships() {
-
-  renderFilteredInternships(internships, "internshipContainer");
-
+  renderFilteredInternships(internships, getInternshipContainerId());
 }
 
 
@@ -88,7 +91,7 @@ function renderFilteredInternships(data, containerId) {
 
       <div class="job-right">
 
-        <a href="pages/internship.html?id=${job.id}" class="view-btn">
+        <a href="internship.html?id=${job.id}" class="view-btn">
           View Details
         </a>
 
@@ -135,7 +138,7 @@ function handleSearch() {
 
   });
 
-  renderFilteredInternships(filtered, "internshipContainer");
+  renderFilteredInternships(filtered, getInternshipContainerId());
 
 }
 
@@ -163,7 +166,7 @@ function filterByTag(tag) {
 
   });
 
-  renderFilteredInternships(filtered, "internshipContainer");
+  renderFilteredInternships(filtered, getInternshipContainerId());
 
 }
 
@@ -180,7 +183,7 @@ async function loadInternshipDetails() {
 
   try {
 
-    const response = await fetch("../data/internships.json");
+    const response = await fetch("data/internships.json");
 
     const internships = await response.json();
 
@@ -252,66 +255,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-});
-let jobs = [];
+  const filterButton = document.getElementById("filterBtn");
 
-fetch('jobs.json')
-.then(res => res.json())
-.then(data => {
-jobs = data;
-renderJobs(jobs);
+  if (filterButton) {
+    filterButton.addEventListener("click", applyCheckboxFilters);
+  }
+
 });
 
-function renderJobs(data){
-const container = document.getElementById('jobList');
-container.innerHTML = '';
+function applyCheckboxFilters() {
+  const checkboxes = document.querySelectorAll('.filter-group input:checked');
+  const values = Array.from(checkboxes).map(cb => cb.value.toLowerCase());
 
-data.forEach(job => {
-container.innerHTML += `
-<div class="card">
-<div class="card-left">
-<div class="icon">${job.company[0]}</div>
-<div>
-<h3>${job.title}</h3>
-<div class="meta">${job.company} • ${job.location} • ${job.type}</div>
-<div class="salary">${job.salary || ''}</div>
-</div>
-</div>
-<button class="btn">View Details</button>
-</div>
-`;
-});
+  renderTags(values);
+
+  if (values.length === 0) {
+    renderInternships();
+    return;
+  }
+
+  const filtered = internships.filter(job => {
+    return values.some(value => {
+      return (
+        job.type?.toLowerCase() === value ||
+        job.location?.toLowerCase().includes(value) ||
+        job.category?.toLowerCase() === value ||
+        (job.skills && job.skills.some(skill => skill.toLowerCase() === value))
+      );
+    });
+  });
+
+  renderFilteredInternships(filtered, getInternshipContainerId());
 }
 
-document.getElementById('applyBtn').addEventListener('click', () => {
-const checkboxes = document.querySelectorAll('.filter-group input:checked');
-const values = Array.from(checkboxes).map(cb => cb.value);
+function renderTags(tags) {
+  const tagContainer = document.getElementById('activeTags');
+  if (!tagContainer) return;
 
-const filtered = jobs.filter(job => {
-if(values.length === 0) return true;
-return values.includes(job.type) || values.includes(job.location);
-});
+  tagContainer.innerHTML = '';
 
-renderJobs(filtered);
-renderTags(values);
-});
-
-function renderTags(tags){
-const tagContainer = document.getElementById('activeTags');
-tagContainer.innerHTML = '';
-
-tags.forEach(tag=>{
-tagContainer.innerHTML += `<div class="tag">${tag}</div>`;
-});
+  tags.forEach(tag => {
+    tagContainer.innerHTML += `<div class="tag">${tag}</div>`;
+  });
 }
-
-document.getElementById('searchInput').addEventListener('input', e=>{
-const val = e.target.value.toLowerCase();
-
-const filtered = jobs.filter(job =>
-job.title.toLowerCase().includes(val) ||
-job.company.toLowerCase().includes(val)
-);
-
-renderJobs(filtered);
-});
